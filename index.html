@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia dos Namorados</title>
+    <!-- Link do Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Configurações básicas */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f2; /* Fundo rosa claro */
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #ff66b2; /* Rosa mais forte */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Título principal */
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Seção de introdução */
+        .intro {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .intro p {
+            display: none; /* Esconder o texto inicialmente */
+            background-color: rgba(255, 248, 220, 0.8); /* Cor de fundo para parecer papel antigo */
+            padding: 20px;
+            border: 1px solid #d4af37;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Georgia', serif;
+            font-size: 1.2em;
+            color: #5a3e36;
+        }
+
+        /* Botão personalizado */
+        #showMessageButton {
+            background-color: #ff66b2;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #showMessageButton:hover {
+            background-color: #e055a1;
+        }
+
+        /* Galeria */
+        .gallery {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .gallery h2 {
+            font-size: 2em;
+            color: #ff3399;
+        }
+
+        .carousel-item img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .polaroid {
+            position: relative;
+            width: 80%;
+            max-width: 400px;
+            background-color: white;
+            padding: 10px 10px 30px 10px;
+            border: 1px solid #bfbfbf;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            margin: 10px auto;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .caption {
+            color: #5a3e36;
+            font-size: 1em;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #ff66b2;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 767px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .intro p {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            #showMessageButton {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            .gallery h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 575px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .intro p {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+
+            #showMessageButton {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            .gallery h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feliz Dia dos Namorados!</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <button id="showMessageButton" class="btn btn-primary">Mostrar Mensagem</button>
+            <p id="introMessage"> TE AMO MUITO ❤️ </p>
+        </section>
+        <section class="gallery">
+            <h2>Galeria de Momentos</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="polaroid">
+                            <img src="img/foto 1.jpeg" alt="Momento 1">
+                            <div class="caption">Minha</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="polaroid">
+                            <img src="img/foto 2.jpeg" alt="Momento 2">
+                            <div class="caption">Vida</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="polaroid">
+                            <img src="img/foto 4.jpeg" alt="Momento 3">
+                            <div class="caption"> Com você </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="polaroid">
+                            <img src="img/foto 5.jpeg" alt="Momento 3">
+                            <div class="caption"> É um mar de felicidade ❤️ </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Próximo</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link do Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('showMessageButton').addEventListener('click', function() {
+            var message = document.getElementById('introMessage');
+            if (message.style.display === 'block') {
+                message.style.display = 'none';
+            } else {
+                message.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
